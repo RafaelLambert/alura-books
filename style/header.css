@@ -1,0 +1,142 @@
+.cabecalho__menu-hamburguer {
+    width: 48px;
+    height: 48px;
+
+    background-image: url("../assets/Menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+
+
+
+.cabecalho {
+    background-color: var(--color-branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 5.5vw;
+    position: relative;
+}
+
+.cabecalho-menu {
+    display: flex;
+    align-items: center;
+    gap: 7.5vw;
+    padding: 1rem 0;
+}
+
+
+
+.lista-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 70vw;
+}
+
+.cabecalho__botao {
+    display: none;
+}
+
+.cabecalho__botao:checked~.lista-menu {
+    display: block;
+}
+
+.cabecalho__botao:checked+label .cabecalho__menu-hamburguer {
+    background:
+        url("../assets/Menu-Aberto.svg"),
+        var(--color-azul-degrade);
+    background-position: center, center;
+    /* centraliza ambos */
+    background-repeat: no-repeat, no-repeat;
+}
+
+
+
+.lista-menu__titulo,
+.lista-menu__item {
+    padding: 1em;
+    background-color: var(--color-branco);
+}
+
+.lista-menu__titulo {
+    font-weight: 700;
+    color: var(--color-laranja);
+}
+
+.lista-menu__link {
+    font-weight: 300;
+    background: var(--color-azul-degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.cabecalho__titulo {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .cabecalho-menu {
+        gap: 4.5vw;
+        padding: 1rem 0;
+    }
+
+    .cabecalho__menu-hamburguer {
+        width: 48px;
+        height: 48px;
+
+        background-image: url("../assets/Menu.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        display: none;
+    }
+
+    .cabecalho__titulo,
+    .cabecalho__titulo--negrito {
+        font-family: var(--fonte-secundario);
+        font-size: 30px;
+    }
+
+    .cabecalho__titulo {
+        display: block;
+        font-weight: 400;
+    }
+
+    .cabecalho__titulo--negrito {
+        font-weight: 700;
+    }
+
+    .cabecalho__imagem-favorito {
+        display: none;
+    }
+
+    .opcoes {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+    }
+
+    .opcoes__item {
+        text-transform: uppercase;
+    }
+
+    .opcoes__link {
+        text-decoration: none;
+        color: var(--color-preto);
+    }
+
+    .opcoes__botao:checked~.lista-menu {
+        display: block;
+        width: auto;
+    }
+
+    .opcoes__botao {
+        display: none;
+    }
+
+
+}
