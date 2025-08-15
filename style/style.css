@@ -8,11 +8,15 @@
 
 :root{
     --color-background: #EBECEE;
-    --color-branco: #FFFFFF;
-    --color-laranja: #EB9800;
+
     --color-azul: #002F52;
-    --color-preto: #000000;
     --color-azul-degrade: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
+    --color-branco: #FFFFFF;
+    --color-cinza: #474646;
+    --color-cinza-claro: #858585;
+    --color-laranja: #EB9800;
+    --color-preto: #000000;
+    
     --fonte-principal: "Poppins";
     --fonte-secundario: "Josefin Sans";
 }
